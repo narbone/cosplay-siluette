@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-charcoal: #3d3e40;
+  --color-yellow: #f2ce16;
+  --color-brown: #a6886d;
+  --color-tan: #d9bea7;
+  --color-peach: #f2d8ce;
+}
+
+@layer base {
+  body {
+    @apply bg-charcoal text-peach antialiased;
+  }
+}
