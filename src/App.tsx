@@ -60,7 +60,7 @@ const MOCK_SECTIONS: SectionData[] = [
     textColor: "#F2D8CE",
     accentColor: "#D9BEA7",
     textPosition: TEXT_POSITIONS[0],
-    bgImageUrl: "/images/class.jpeg",
+    bgImageUrl: "images/class.jpeg",
     bgImagePosition: BG_IMAGE_POSITIONS[0],
   },
   {
@@ -70,7 +70,7 @@ const MOCK_SECTIONS: SectionData[] = [
     textColor: "#3D3E40",
     accentColor: "#A60311",
     textPosition: TEXT_POSITIONS[1],
-    bgImageUrl: "/images/draw.jpeg",
+    bgImageUrl: "images/draw.jpeg",
     bgImagePosition: BG_IMAGE_POSITIONS[1],
   },
   {
@@ -80,7 +80,7 @@ const MOCK_SECTIONS: SectionData[] = [
     textColor: "#3D3E40",
     accentColor: "#A60311",
     textPosition: TEXT_POSITIONS[2],
-    bgImageUrl: "/images/siluette.jpeg",
+    bgImageUrl: "images/siluette.jpeg",
     bgImagePosition: BG_IMAGE_POSITIONS[2],
   },
 ];
@@ -152,7 +152,9 @@ const Section: React.FC<SectionProps> = ({
           <div className="absolute inset-0 size-full z-0">
             <div
               className={`size-full bg-cover lg:bg-contain ${bgPosClass} bg-no-repeat`}
-              style={{ backgroundImage: `url(${bgImageUrl})` }}
+              style={{
+                backgroundImage: `url(${import.meta.env.BASE_URL}${bgImageUrl})`,
+              }}
             />
             <div className="absolute inset-0 bg-black/40" />
           </div>
